@@ -47,7 +47,7 @@ jobs:
       - run:
           name: Push build files
           command: |
-            if [ $GIT_COMMIT_DESC != "update chrome.crx and release" ]; then
+            if [ "`eval $GIT_COMMIT_DESC`" != "update chrome.crx and release" ]; then
               git config --global user.email "acgotaku311@gmail.com"
               git config --global user.name "acgotaku311"
               git add BaiduExporter.crx
